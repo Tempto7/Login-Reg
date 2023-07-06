@@ -10,6 +10,7 @@ require("./config/dbConnect");
 const port = process.env.PORT || 4000;
 
 const app = express();
+app.use(express.static("public"));
 app.use(express.urlencoded({extended:false}));
 const viewDirectory = path.join(__dirname,"./views")
 
@@ -18,6 +19,9 @@ app.set("views", viewDirectory);
 
 app.get("/",(req,res)=>{
     res.render("Home.hbs");
+})
+app.get("/error",(req,res)=>{
+  res.render("Error.hbs");
 })
 app.use("/signup",signupRoute);
 app.use("/login",loginRoute);
