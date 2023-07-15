@@ -13,7 +13,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(express.urlencoded({extended:false}));
 const viewDirectory = path.join(__dirname,"./views")
-
+//template view for handlebar view engine
 app.set("view engine", "hbs");
 app.set("views", viewDirectory);
 
@@ -27,6 +27,6 @@ app.use("/signup",signupRoute);
 app.use("/login",loginRoute);
 
 app.listen(port, () => {
-  console.log(`Server is running at port ${port}`);
+  console.log(`Server is listening at port ${port}`);
 });
  
