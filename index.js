@@ -27,6 +27,6 @@ app.use("/signup",signupRoute);
 app.use("/login",loginRoute);
 
 app.listen(port, () => {
-  console.log(`Server is listening at port ${port}`);
+  console.log(`Server is running at port ${port}`);
 });
  
