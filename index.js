@@ -13,7 +13,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(express.urlencoded({extended:false}));
 const viewDirectory = path.join(__dirname,"./views")
-
+//template view for handlebar view engine
 app.set("view engine", "hbs");
 app.set("views", viewDirectory);
 
